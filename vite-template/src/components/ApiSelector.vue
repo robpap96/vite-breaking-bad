@@ -31,7 +31,7 @@ export default {
 
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
     .category{
         width: 200px;
     }

@@ -1,7 +1,7 @@
 <script>
 
 export default {
-    name: 'AppHeader',
+    name: 'CharacterCounter',
     components: {
     },
     defineProps :{
@@ -18,15 +18,17 @@ export default {
 </script>
 
 <template>
-    
-    <h1 class="p-3">
-        Breaking Bad Api
-    </h1>
+    <div class="container-fluid p-3">
+       <span>Found .. Characters</span>
+    </div>
 
 </template>
 
 <style lang="scss" scoped>
-    h1 {
-        color: #f8f9fa;
+    .container-fluid {
+        background-color: #212529;
+    }
+    span {
+        color: white;
     }
 </style>
