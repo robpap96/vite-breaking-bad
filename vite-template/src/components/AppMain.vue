@@ -1,9 +1,10 @@
 <script>
-//import AppName  from './....AppName.vue'
+import ApiSelector  from './ApiSelector.vue'
 
 export default {
     name: 'AppMain',
     components: {
+        ApiSelector,
 
     },
     defineProps :{
@@ -20,7 +21,10 @@ export default {
 </script>
 
 <template>
-    <!-- <AppName/> -->
+    <div class="container p-3">
+        <ApiSelector/>
+
+    </div>
 </template>
 
 <style scoped>
