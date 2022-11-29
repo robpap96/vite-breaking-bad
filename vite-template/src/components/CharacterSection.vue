@@ -1,7 +1,7 @@
 <script>
 import CharacterCard  from './CharacterCard.vue';
 import CharactersCounter  from './CharactersCounter.vue';
-
+import {store} from "../store.js";
 
 export default {
     name: 'CharacterSection',
@@ -9,14 +9,15 @@ export default {
         CharacterCard,
         CharactersCounter,
     },
-    defineProps :{
+    defineProps: {
         //msg: String
     },
-    data(){
+    data() {
         return {
             store,
         }
     },
+
 
 
 }
@@ -27,7 +28,9 @@ export default {
         <CharactersCounter/>
     </div>
     <div class="p-4">
-        <CharacterCard/>
+        <CharacterCard
+            v-for="character in store.Characters"
+        />
     </div>
 
 </template>

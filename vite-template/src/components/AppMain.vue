@@ -1,8 +1,8 @@
 <script>
 import ApiSelector  from './ApiSelector.vue';
 import CharacterSection  from './CharacterSection.vue';
-import axios from "axios";
 import {store} from "../store.js";
+import axios from "axios";
 
 export default {
     name: 'AppMain',
@@ -22,10 +22,11 @@ export default {
         created(){
             axios.get("https://www.breakingbadapi.com/api/characters")
             .then((resp) => {
-                this.store.characters = resp.data.results;
+                this.store.Characters = resp.data.results;
             });
         },
     }
+
 
 
 }
