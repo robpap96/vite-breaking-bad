@@ -19,13 +19,14 @@ export default {
         }
     },  
     methods: {
-        created(){
-            axios.get("https://www.breakingbadapi.com/api/characters")
-            .then((resp) => {
-                this.store.Characters = resp.data.results;
-            });
-        },
-    }
+    
+    },
+    created(){
+        axios.get("https://www.breakingbadapi.com/api/characters")
+        .then((resp) => {
+            this.store.Characters = resp.data;
+        });
+    },
 
 
 

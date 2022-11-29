@@ -27,10 +27,12 @@ export default {
     <div class="p-4">
         <CharactersCounter/>
     </div>
-    <div class="p-4">
+    <div class="row justify-content-between flex-wrap p-5">
         <CharacterCard
             v-for="character in store.Characters"
+            class="p-5 mb-5"
         />
+
     </div>
 
 </template>

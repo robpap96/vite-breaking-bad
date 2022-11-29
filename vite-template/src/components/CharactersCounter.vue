@@ -1,4 +1,5 @@
 <script>
+import {store} from "../store.js";
 
 export default {
     name: 'CharacterCounter',
@@ -9,7 +10,7 @@ export default {
     },
     data(){
         return {
-            //
+            store,
         }
     },
 
@@ -19,7 +20,7 @@ export default {
 
 <template>
     <div class="container-fluid p-3">
-       <span>Found .. Characters</span>
+       <span>Found  Characters</span>
     </div>
 
 </template>

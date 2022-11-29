@@ -1,5 +1,6 @@
 <script>
 //import AppName  from './....AppName.vue'
+import {store} from "../store.js";
 
 export default {
     name: 'CharacterCard',
@@ -11,26 +12,40 @@ export default {
     },
     data(){
         return {
-            //
+            store,
         }
     },
+    methods: {
+        counter(index){
+            
 
+        }
+    }
 
 }
 </script>
 
-<template>
-    <div class="card" style="width: 18rem;">
-        <img src="" class="card-img-top" alt="sdcvsd">
+<template>  
+
+    <div class="card mb-5" v-for="character in store.Characters">
+        <img :src="`${character.img}`" class="card-img-top" :alt="`${character.name}`">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">{{character.name}}</h5>
+            <h4 class="card-title">{{character.category}}</h4>
+            <h3 class="card-title">{{character.status}}</h3>
         </div>
-    </div>
+
+
+</div>
 
 </template>
 
 <style lang="scss" scoped>
-
+    .card{
+        width: calc(100% / 5 - 30px);
+        img{
+            width: 100%;
+            height: 250px;
+        }
+    }
 </style>
